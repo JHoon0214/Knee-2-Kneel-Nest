@@ -24,16 +24,15 @@ export class PlayerActionDTO {
   @IsNumber()
   roomId: number;
 
+  @IsNumber()
+  playerIndex: number;
+
   @IsString()
   dataName: String;
 
   @ValidateNested()
   @Type(() => MoveDTO)
   move: MoveDTO;
-
-  @ValidateNested()
-  @Type(() => LookDTO)
-  look: LookDTO;
 
   @IsBoolean()
   jump: boolean;
@@ -43,13 +42,4 @@ export class PlayerActionDTO {
 
   @IsBoolean()
   kick: boolean;
-
-  @IsBoolean()
-  analogMovement: boolean;
-
-  @IsBoolean()
-  cursorLocked: boolean;
-
-  @IsBoolean()
-  cursorInputForLook: boolean;
 }

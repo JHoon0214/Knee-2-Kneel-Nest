@@ -36,7 +36,7 @@ export class GameController {
                 const data:PlayerActionDTO = plainToInstance(PlayerActionDTO, befParsedData);
 
                 console.log(`Received message from ${rinfo.address}:${rinfo.port}:`);
-                console.log(`jump: ${data.jump}, look: ${data.look}, kick: ${data.kick}, sprint: ${data.sprint}`);
+                console.log(`jump: ${data.jump}, kick: ${data.kick}, sprint: ${data.sprint}`);
 
                 this.gameService.addClientToRoom(data.roomId, clientId, rinfo.address, rinfo.port);
                 this.gameService.broadcastToRoom(data.roomId, clientId, data);
