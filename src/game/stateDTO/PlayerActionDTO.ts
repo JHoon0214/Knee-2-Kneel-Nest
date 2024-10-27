@@ -10,6 +10,14 @@ export class MoveDTO {
   y: number;
 }
 
+export class PositionDTO {
+  @IsNumber()
+  x: number;
+
+  @IsNumber()
+  y: number;
+}
+
 // LookDTO: look 필드를 정의한 클래스
 export class LookDTO {
   @IsNumber()
@@ -42,4 +50,8 @@ export class PlayerActionDTO {
 
   @IsBoolean()
   kick: boolean;
+
+  @ValidateNested()
+  @Type(() => PositionDTO)
+  position: PositionDTO;
 }
