@@ -4,7 +4,7 @@ import * as dgram from 'dgram';
 import { plainToClass, plainToInstance } from 'class-transformer';
 import { validate, validateSync } from 'class-validator';
 
-import { PlayerActionDTO } from './stateDTO/PlayerActionDTO';
+import { PlayerActionDTO } from './dtos/playerActionDTO';
 import { debug } from 'console';
 
 @Controller()
@@ -38,8 +38,9 @@ export class GameController {
                 console.log(`Received message from ${rinfo.address}:${rinfo.port}:`);
                 console.log(`jump: ${data.jump}, kick: ${data.kick}, sprint: ${data.sprint}`);
 
-                this.gameService.addClientToRoom(data.roomId, clientId, rinfo.address, rinfo.port);
-                this.gameService.broadcastToRoom(data.roomId, clientId, data);
+                this.gameService.updateClientActivity(data.roomId, clientId);
+                this.gameService.addClientToRoom(data.roomId, clientId, rinfo.address, rinfo.port, data.playerIndex);
+                this.gameService.broadcastState(data.roomId, data);
             }
         });
 
