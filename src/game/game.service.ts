@@ -13,7 +13,6 @@ export class GameService {
         this.udpServer = udpServer;
     }
     addClientToRoom(roomId: number, clientId: string, address: string, port: number) {
-        port = 3008;
         if (!this.rooms.has(roomId)) {
             this.rooms.set(roomId, new Map());
         }
@@ -43,8 +42,8 @@ export class GameService {
 
         room.forEach((client, clientId) => {
             const message = JSON.stringify(data);
-            console.log(`sending... ${message} to ${3008} ${client.address}`)
-            this.udpServer.send(message, 3008, client.address, (err) => {
+            console.log(`sending... ${message} to ${client.port} ${client.address}`)
+            this.udpServer.send(message, client.port, client.address, (err) => {
                 if (err) {
                     console.error(`Error broadcasting to client ${clientId}: ${err}`);
                 }

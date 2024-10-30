@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>채팅 WebSocket 테스트</title>
+</head>
+<body>
+  <h1>채팅 방</h1>
+  <input type="text" id="room" placeholder="방 ID 입력" />
+  <input type="text" id="message" placeholder="메시지 입력" />
+  <button onclick="joinRoom()">방 입장</button>
+  <button onclick="leaveRoom()">방 퇴장</button>
+  <button onclick="sendMessage()">메시지 전송</button>
+
+  <div id="chatLog"></div>
+
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+
+  <script>
+    const socket = io('http://localhost:3003/chat');
+
+    socket.on('connect', () => {
+      console.log('서버에 연결되었습니다:', socket.id);
+    });
+
+    socket.on('joinedRoom', (room) => {
+      console.log(`방 ${room}에 입장했습니다.`);
+      document.getElementById('chatLog').innerText += `방 ${room}에 입장했습니다.\n`;
+    });
+
+    socket.on('leftRoom', (room) => {
+      console.log(`방 ${room}에서 퇴장했습니다.`);
+      document.getElementById('chatLog').innerText += `방 ${room}에서 퇴장했습니다.\n`;
+    });
+
+    socket.on('receiveMessage', (message) => {
+      console.log('메시지 수신:', message);
+      document.getElementById('chatLog').innerText += `메시지: ${message.content}\n`;
+    });
+
+    function joinRoom() {
+      const room = document.getElementById('room').value;
+      socket.emit('joinRoom', room);
+    }
+
+    function leaveRoom() {
+      const room = document.getElementById('room').value;
+      socket.emit('leaveRoom', room);
+    }
+
+    function sendMessage() {
+      const room = document.getElementById('room').value;
+      const content = document.getElementById('message').value;
+      socket.emit('sendMessage', { room, content });
+    }
+  </script>
+
+</body>
+</html>

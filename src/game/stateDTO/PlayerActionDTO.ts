@@ -10,6 +10,14 @@ export class MoveDTO {
   y: number;
 }
 
+export class PositionDTO {
+  @IsNumber()
+  x: number;
+
+  @IsNumber()
+  y: number;
+}
+
 // LookDTO: look 필드를 정의한 클래스
 export class LookDTO {
   @IsNumber()
@@ -24,16 +32,15 @@ export class PlayerActionDTO {
   @IsNumber()
   roomId: number;
 
+  @IsNumber()
+  playerIndex: number;
+
   @IsString()
   dataName: String;
 
   @ValidateNested()
   @Type(() => MoveDTO)
   move: MoveDTO;
-
-  @ValidateNested()
-  @Type(() => LookDTO)
-  look: LookDTO;
 
   @IsBoolean()
   jump: boolean;
@@ -44,12 +51,14 @@ export class PlayerActionDTO {
   @IsBoolean()
   kick: boolean;
 
-  @IsBoolean()
-  analogMovement: boolean;
+  @ValidateNested()
+  @Type(() => PositionDTO)
+  position: PositionDTO;
 
-  @IsBoolean()
-  cursorLocked: boolean;
+  @ValidateNested()
+  @Type(() => LookDTO)
+  look: LookDTO;
 
-  @IsBoolean()
-  cursorInputForLook: boolean;
+  @IsNumber()
+  cY: number;
 }
