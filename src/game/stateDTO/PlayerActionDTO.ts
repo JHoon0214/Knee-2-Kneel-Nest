@@ -54,4 +54,11 @@ export class PlayerActionDTO {
   @ValidateNested()
   @Type(() => PositionDTO)
   position: PositionDTO;
+
+  @ValidateNested()
+  @Type(() => LookDTO)
+  look: LookDTO;
+
+  @IsNumber()
+  cY: number;
 }
