@@ -1,11 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import * as dgram from 'dgram';
-import { PlayerActionDTO } from './dtos/PlayerActionDTO';
-import { RemoveDTO } from './dtos/RemoveDTO';
+import { PlayerActionDTO } from './dtos/playerActionDTO';
+import { RemoveDTO } from './dtos/removeDTO';
+import { PlayerDTO } from './dtos/playerDTO';
 
 @Injectable()
 export class GameService {
-    private rooms = new Map<number, Map<string, { address: string, port: number, lastActive: number }>>();
+    private rooms = new Map<number, Map<string, PlayerDTO>>();
     private udpServer: dgram.Socket;
     private inactivityTimeout = 3000;
 
@@ -18,12 +19,12 @@ export class GameService {
     setUdpServer(udpServer: dgram.Socket) {
         this.udpServer = udpServer;
     }
-    addClientToRoom(roomId: number, clientId: string, address: string, port: number) {
+    addClientToRoom(roomId: number, clientId: string, address: string, port: number, playerIndex: number) {
         if (!this.rooms.has(roomId)) {
             this.rooms.set(roomId, new Map());
         }
         const room = this.rooms.get(roomId);
-        room.set(clientId, { address, port, lastActive: Date.now() });
+        room.set(clientId, { address, port, lastActive: Date.now(), playerIndex });
         console.log(`Client ${clientId} joined room ${roomId}: ${address}:${port}`);
     }
 
@@ -36,7 +37,7 @@ export class GameService {
 
     removeClientFromRoom(roomId: number, clientId: string) {
         const room = this.rooms.get(roomId);
-        const currPlayerIndex = room.get(clientId)
+        const currPlayerIndex = room.get(clientId).playerIndex
         if (room) {
             room.delete(clientId);
             if (room.size === 0) {
@@ -44,7 +45,7 @@ export class GameService {
             }
         }  
         console.log(`Client ${clientId} left room ${roomId}`);
-        this.broadcastRemove(roomId, { dataName: 'remove'});
+        this.broadcastRemove(roomId, { dataName: 'remove', playerIndex: currPlayerIndex});
     }
 
     broadcastRemove(roomId: number, data: RemoveDTO) {
