@@ -87,13 +87,43 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
         }
         case 'throwCollision': {
           const { gameId, payload } = parsed;
+        
           if (!gameId || !payload) {
             socket.write('throwCollision 메시지에 필요한 필드가 누락되었습니다.');
             return;
           }
-          this.broadcastToRoom(gameId, message);
+        
+          // 방 데이터 가져오기
+          const room = this.rooms.get(gameId);
+          if (!room) {
+            socket.write(`방 '${gameId}'이 존재하지 않습니다.`);
+            return;
+          }
+        
+          // 학생 수 감소 처리
+          room.remainStdNum -= 1;
+          console.log(`One student out. Remaining students: ${room.remainStdNum}`);
+        
+          // isEnd 값 결정
+          const isEnd = room.remainStdNum <= 0;
+        
+          // 메시지에 isEnd 필드 추가
+          const responseMessage = {
+            ...parsed,
+            isEnd,
+          };
+        
+          // 브로드캐스트
+          this.broadcastToRoom(gameId, JSON.stringify(responseMessage));
+        
+          // 게임 종료 시 추가 처리
+          if (isEnd) {
+            console.log(`방 '${gameId}'의 게임이 종료되었습니다.`);
+            // 필요한 경우 추가 로직을 작성하세요.
+          }
           break;
         }
+        
 
         default:
           socket.write(`알 수 없는 dataName: ${dataName}`);
@@ -171,7 +201,7 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
     const message = JSON.stringify({
       dataName: 'gameStart',
       success,
-      serverTime: `${serverTime.getFullYear()}-${String(serverTime.getMonth() + 1).padStart(2, '0')}-${String(serverTime.getDate()).padStart(2, '0')}T${String(serverTime.getHours()).padStart(2, '0')}:${String(serverTime.getMinutes()).padStart(2, '0')}:${String(serverTime.getSeconds()).padStart(2, '0')}:0000000`
+      serverTime: `${serverTime.getFullYear()}-${String(serverTime.getMonth() + 1).padStart(2, '0')}-${String(serverTime.getDate()).padStart(2, '0')}T${String(serverTime.getHours()).padStart(2, '0')}:${String(serverTime.getMinutes()).padStart(2, '0')}:${String(serverTime.getSeconds()).padStart(2, '0')}.0000000`
     });
 
     for (const member of room.members) {
