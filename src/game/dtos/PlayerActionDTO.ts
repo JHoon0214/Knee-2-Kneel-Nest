@@ -30,7 +30,7 @@ export class LookDTO {
 // Main DTO 클래스
 export class PlayerActionDTO {
   @IsNumber()
-  roomId: number;
+  gameId: string;
 
   @IsNumber()
   playerIndex: number;

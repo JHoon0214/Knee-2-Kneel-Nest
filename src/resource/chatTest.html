@@ -6,55 +6,76 @@
   <title>채팅 WebSocket 테스트</title>
 </head>
 <body>
-  <h1>채팅 방</h1>
-  <input type="text" id="room" placeholder="방 ID 입력" />
-  <input type="text" id="message" placeholder="메시지 입력" />
+  <h1>채팅 WebSocket 테스트</h1>
+
+  <div>
+    <label for="room">방 ID:</label>
+    <input type="text" id="room" placeholder="방 ID 입력" />
+  </div>
+  <div>
+    <label for="message">메시지:</label>
+    <input type="text" id="message" placeholder="메시지 입력" />
+  </div>
   <button onclick="joinRoom()">방 입장</button>
   <button onclick="leaveRoom()">방 퇴장</button>
   <button onclick="sendMessage()">메시지 전송</button>
 
-  <div id="chatLog"></div>
-
-  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <h2>채팅 로그</h2>
+  <div id="chatLog" style="white-space: pre-wrap; border: 1px solid #ddd; padding: 10px; height: 300px; overflow-y: auto;"></div>
 
   <script>
-    const socket = io('http://localhost:3003/chat');
+    const ws = new WebSocket('ws://localhost:3004/chat'); // WebSocket 서버 주소
 
-    socket.on('connect', () => {
-      console.log('서버에 연결되었습니다:', socket.id);
-    });
+    ws.onopen = () => {
+      console.log('WebSocket 서버에 연결되었습니다.');
+      document.getElementById('chatLog').innerText += 'WebSocket 서버에 연결되었습니다.\n';
+    };
 
-    socket.on('joinedRoom', (room) => {
-      console.log(`방 ${room}에 입장했습니다.`);
-      document.getElementById('chatLog').innerText += `방 ${room}에 입장했습니다.\n`;
-    });
+    ws.onmessage = (event) => {
+      console.log('서버로부터 메시지:', event.data);
+      document.getElementById('chatLog').innerText += `서버: ${event.data}\n`;
+    };
 
-    socket.on('leftRoom', (room) => {
-      console.log(`방 ${room}에서 퇴장했습니다.`);
-      document.getElementById('chatLog').innerText += `방 ${room}에서 퇴장했습니다.\n`;
-    });
+    ws.onclose = (event) => {
+      console.log('WebSocket 서버 연결이 종료되었습니다.', event);
+      document.getElementById('chatLog').innerText += 'WebSocket 서버 연결이 종료되었습니다.\n';
+    };
 
-    socket.on('receiveMessage', (message) => {
-      console.log('메시지 수신:', message);
-      document.getElementById('chatLog').innerText += `메시지: ${message.content}\n`;
-    });
+    ws.onerror = (error) => {
+      console.error('WebSocket 오류:', error);
+      document.getElementById('chatLog').innerText += `WebSocket 오류: ${error}\n`;
+    };
 
     function joinRoom() {
       const room = document.getElementById('room').value;
-      socket.emit('joinRoom', room);
+      if (room.trim() === '') {
+        alert('방 ID를 입력하세요.');
+        return;
+      }
+      ws.send(JSON.stringify({ event: 'joinRoom', data: room }));
+      document.getElementById('chatLog').innerText += `방 ${room}에 입장 요청을 보냈습니다.\n`;
     }
 
     function leaveRoom() {
       const room = document.getElementById('room').value;
-      socket.emit('leaveRoom', room);
+      if (room.trim() === '') {
+        alert('방 ID를 입력하세요.');
+        return;
+      }
+      ws.send(JSON.stringify({ event: 'leaveRoom', data: room }));
+      document.getElementById('chatLog').innerText += `방 ${room}에서 퇴장 요청을 보냈습니다.\n`;
     }
 
     function sendMessage() {
       const room = document.getElementById('room').value;
       const content = document.getElementById('message').value;
-      socket.emit('sendMessage', { room, content });
+      if (room.trim() === '' || content.trim() === '') {
+        alert('방 ID와 메시지를 입력하세요.');
+        return;
+      }
+      ws.send(JSON.stringify({ event: 'sendMessage', data: { room, content } }));
+      document.getElementById('chatLog').innerText += `보낸 메시지: ${content} (방: ${room})\n`;
     }
   </script>
-
 </body>
 </html>
