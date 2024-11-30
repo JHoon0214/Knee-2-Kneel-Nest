@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebRTC Audio Chat</title>
+</head>
+<body>
+  <h1>WebRTC Audio Chat</h1>
+  <label for="room">Room Name:</label>
+  <input type="text" id="room" placeholder="Enter room name" />
+  <button id="joinRoom">Join Room</button>
+  <br/><br/>
+
+  <button id="startCall">Start Call</button>
+  <audio id="remoteAudio" autoplay></audio>
+  <textarea id="logs" rows="20" cols="50" readonly></textarea>
+
+  <script>
+    const ws = new WebSocket('ws://141.164.52.130:3005/signal');
+    const logs = document.getElementById('logs');
+    const remoteAudio = document.getElementById('remoteAudio');
+    let localStream;
+    let peerConnection;
+
+    // STUN 서버 설정
+    const configuration = {
+      iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
+    };
+
+    // 로그 업데이트
+    function log(message) {
+      logs.value += message + '\n';
+      logs.scrollTop = logs.scrollHeight;
+    }
+
+    // WebSocket 이벤트 핸들러
+    ws.onopen = () => log('WebSocket connected');
+    ws.onmessage = async (event) => {
+      const msg = JSON.parse(event.data);
+      log(`Received: ${JSON.stringify(msg)}`);
+
+      switch (msg.eventType) {
+        case 'offer':
+          await handleOffer(msg.data);
+          break;
+        case 'answer':
+          await handleAnswer(msg.data);
+          break;
+        case 'iceCandidate':
+          await handleIceCandidate(msg.data);
+          break;
+      }
+    };
+    ws.onclose = () => log('WebSocket disconnected');
+    ws.onerror = (error) => log(`Error: ${error.message}`);
+
+    // 방 참가
+    document.getElementById('joinRoom').onclick = () => {
+      const room = document.getElementById('room').value;
+      if (!room) {
+        log('Room name is required!');
+        return;
+      }
+      ws.send(JSON.stringify({ eventType: 'joinRoom', data: room }));
+      log(`Sent: Joined room ${room}`);
+    };
+
+    // 통화 시작
+    document.getElementById('startCall').onclick = async () => {
+      log('Starting call...');
+      localStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      peerConnection = createPeerConnection();
+      localStream.getTracks().forEach((track) => peerConnection.addTrack(track, localStream));
+
+      const offer = await peerConnection.createOffer();
+      await peerConnection.setLocalDescription(offer);
+
+      ws.send(JSON.stringify({ eventType: 'offer', data: offer }));
+      log('Sent offer');
+    };
+
+    // RTCPeerConnection 생성
+    function createPeerConnection() {
+      const pc = new RTCPeerConnection(configuration);
+
+      pc.onicecandidate = ({ candidate }) => {
+        if (candidate) {
+          ws.send(JSON.stringify({ eventType: 'iceCandidate', data: candidate }));
+          log('Sent ICE Candidate');
+        }
+      };
+
+      pc.ontrack = (event) => {
+        log('Received remote track');
+        remoteAudio.srcObject = event.streams[0];
+      };
+
+      return pc;
+    }
+
+    // Offer 처리
+    async function handleOffer(offer) {
+      log('Handling offer...');
+      peerConnection = createPeerConnection();
+
+      localStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      localStream.getTracks().forEach((track) => peerConnection.addTrack(track, localStream));
+
+      await peerConnection.setRemoteDescription(new RTCSessionDescription(offer));
+      const answer = await peerConnection.createAnswer();
+      await peerConnection.setLocalDescription(answer);
+
+      ws.send(JSON.stringify({ eventType: 'answer', data: answer }));
+      log('Sent answer');
+    }
+
+    // Answer 처리
+    async function handleAnswer(answer) {
+      log('Handling answer...');
+      await peerConnection.setRemoteDescription(new RTCSessionDescription(answer));
+    }
+
+    // ICE Candidate 처리
+    async function handleIceCandidate(candidate) {
+      log('Handling ICE Candidate...');
+      await peerConnection.addIceCandidate(new RTCIceCandidate(candidate));
+    }
+  </script>
+</body>
+</html>

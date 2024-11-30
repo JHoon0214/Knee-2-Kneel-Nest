@@ -123,8 +123,15 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
           }
           break;
         }
-        
-
+        case 'throwing': {
+          const { gameId } = parsed;
+          if (!gameId) {
+            socket.write('throwing 메시지에 필요한 필드가 누락되었습니다.');
+            return;
+          }
+          this.broadcastToRoom(gameId, message);
+          break;
+        }
         default:
           socket.write(`알 수 없는 dataName: ${dataName}`);
           break;
@@ -201,7 +208,7 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
     const message = JSON.stringify({
       dataName: 'gameStart',
       success,
-      serverTime: `${serverTime.getFullYear()}-${String(serverTime.getMonth() + 1).padStart(2, '0')}-${String(serverTime.getDate()).padStart(2, '0')}T${String(serverTime.getHours()).padStart(2, '0')}:${String(serverTime.getMinutes()).padStart(2, '0')}:${String(serverTime.getSeconds()).padStart(2, '0')}.0000000`
+      serverTime: `${serverTime.getFullYear()}-${String(serverTime.getMonth() + 1).padStart(2, '0')}-${String(serverTime.getDate()).padStart(2, '0')}T${String(serverTime.getHours()).padStart(2, '0')}:${String(serverTime.getMinutes()).padStart(2, '0')}:${String(serverTime.getSeconds()).padStart(2, '0')}`
     });
 
     for (const member of room.members) {
