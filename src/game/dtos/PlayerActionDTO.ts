@@ -30,7 +30,7 @@ export class LookDTO {
 // Main DTO 클래스
 export class PlayerActionDTO {
   @IsNumber()
-  roomId: number;
+  gameId: string;
 
   @IsNumber()
   playerIndex: number;
@@ -42,23 +42,13 @@ export class PlayerActionDTO {
   @Type(() => MoveDTO)
   move: MoveDTO;
 
-  @IsBoolean()
-  jump: boolean;
-
-  @IsBoolean()
-  sprint: boolean;
-
-  @IsBoolean()
-  kick: boolean;
-
   @ValidateNested()
   @Type(() => PositionDTO)
   position: PositionDTO;
 
-  @ValidateNested()
-  @Type(() => LookDTO)
-  look: LookDTO;
-
   @IsNumber()
   cY: number;
+
+  @IsNumber()
+  role: number
 }

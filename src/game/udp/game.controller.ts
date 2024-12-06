@@ -4,7 +4,7 @@ import * as dgram from 'dgram';
 import { plainToClass, plainToInstance } from 'class-transformer';
 import { validate, validateSync } from 'class-validator';
 
-import { PlayerActionDTO } from './dtos/playerActionDTO';
+import { PlayerActionDTO } from '../dtos/playerActionDTO';
 import { debug } from 'console';
 
 @Controller()
@@ -16,7 +16,7 @@ export class GameController {
         this.udpServer = dgram.createSocket('udp4');
 
         this.udpServer.bind(3001, '0.0.0.0', () => {
-            console.log('UDP server bound to 0.0.0.0:3001');
+            // console.log('UDP server bound to 0.0.0.0:3001');
         });
         
         this.udpServer.on('listening', () => {
@@ -25,22 +25,17 @@ export class GameController {
         });
 
         this.udpServer.on('message', (msg, rinfo) => {
-            console.log("message in");
-            
             const message = msg.toString();
             const clientId = `${rinfo.address}:${rinfo.port}`;
             
             const befParsedData = plainToInstance(Object, JSON.parse(message)) as { [key: string]: any };
 
             if(befParsedData.dataName === "state") {
-                const data:PlayerActionDTO = plainToInstance(PlayerActionDTO, befParsedData);
+                const data:PlayerActionDTO = plainToInstance(PlayerActionDTO, befParsedData) ;
 
-                console.log(`Received message from ${rinfo.address}:${rinfo.port}:`);
-                console.log(`jump: ${data.jump}, kick: ${data.kick}, sprint: ${data.sprint}`);
-
-                this.gameService.updateClientActivity(data.roomId, clientId);
-                this.gameService.addClientToRoom(data.roomId, clientId, rinfo.address, rinfo.port, data.playerIndex);
-                this.gameService.broadcastState(data.roomId, data);
+                this.gameService.updateClientActivity(data.gameId, clientId);
+                this.gameService.addClientToRoom(data.gameId, clientId, rinfo.address, rinfo.port, data.playerIndex, data.role);
+                this.gameService.broadcastState(data.gameId, data, clientId);
             }
         });
 
