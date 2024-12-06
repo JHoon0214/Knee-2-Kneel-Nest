@@ -12,4 +12,7 @@ export class PlayerDTO {
 
     @IsNumber()
     playerIndex: number
+
+    @IsNumber()
+    role: number
 }

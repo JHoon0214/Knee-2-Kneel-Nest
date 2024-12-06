@@ -21,12 +21,10 @@ export class GameController {
         
         this.udpServer.on('listening', () => {
             const address = this.udpServer.address();
-            // console.log(`UDP server is listening on ${address.address}:${address.port}`);
+            console.log(`UDP server is listening on ${address.address}:${address.port}`);
         });
 
         this.udpServer.on('message', (msg, rinfo) => {
-            // console.log("message in");
-            
             const message = msg.toString();
             const clientId = `${rinfo.address}:${rinfo.port}`;
             
@@ -35,12 +33,9 @@ export class GameController {
             if(befParsedData.dataName === "state") {
                 const data:PlayerActionDTO = plainToInstance(PlayerActionDTO, befParsedData) ;
 
-                // console.log(`Received message from ${rinfo.address}:${rinfo.port}:`);
-                // console.log(`jump: ${data.jump}, kick: ${data.kick}, sprint: ${data.sprint}`);
-
                 this.gameService.updateClientActivity(data.gameId, clientId);
-                this.gameService.addClientToRoom(data.gameId, clientId, rinfo.address, rinfo.port, data.playerIndex);
-                this.gameService.broadcastState(data.gameId, data);
+                this.gameService.addClientToRoom(data.gameId, clientId, rinfo.address, rinfo.port, data.playerIndex, data.role);
+                this.gameService.broadcastState(data.gameId, data, clientId);
             }
         });
 

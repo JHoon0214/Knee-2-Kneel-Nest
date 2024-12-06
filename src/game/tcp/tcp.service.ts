@@ -2,6 +2,7 @@ import { Injectable, OnModuleInit, OnModuleDestroy } from '@nestjs/common';
 import { Server, Socket } from 'net';
 import { GameData, gamesData } from '../../lobby-connector/game-data';
 import { LobbyConnectorService } from '../../lobby-connector/lobby-connector.service';
+import { json } from 'stream/consumers';
 
 interface RoomData {
   members: Set<Socket>;
@@ -10,6 +11,8 @@ interface RoomData {
   totalMembers: number;
   studentNum: number;
   remainStdNum: number;
+  stdAliveCheck: number[];
+  currJoin: boolean[];
 }
 
 @Injectable()
@@ -46,98 +49,74 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
       // dataName 필드 확인
       const { dataName } = parsed;
       if (!dataName) {
-        socket.write('dataName이 누락되었습니다.');
+        // socket.write('All: dataName이 누락되었습니다.');
         return;
       }
 
       // dataName에 따른 처리
       switch (dataName) {
         case 'join': {
-          console.log(`join input data: ${JSON.stringify(parsed, null, 2)}`);
           const { gameId, playerIndex, totalMember, localDateTime, studentNum } = parsed;
           if (!gameId || playerIndex==null || totalMember<0 || !localDateTime) {
-            socket.write('join 메시지에 필요한 필드가 누락되었습니다.');
+            // socket.write('join 메시지에 필요한 필드가 누락되었습니다.');
             return;
           }
+          console.log(`Join: 새로운 유저(${playerIndex})가 게임(${gameId})에 참가하였습니다`);
+          // socket.write(`Join: 새로운 유저(${playerIndex})가 게임(${gameId})에 참가하였습니다`);
           this.handleJoin(socket, gameId, playerIndex, totalMember, localDateTime, studentNum );
           break;
         }
 
-        case 'kick':
         case 'jump':
+          const { playerIndex } = parsed;
+          console.log(`${dataName}: ${playerIndex}`)
+        case 'kick':
         case 'sprint':
         case 'broadcast': {
           const { gameId } = parsed;
-          console.log(parsed)
+          console.log(`logging!!: ${dataName} - ${parsed['playerIndex']}`)
           if (!gameId) {
-            socket.write(`${dataName} 메시지에 gameId가 누락되었습니다.`);
+            console.log(`${dataName}:  메시지에 gameId가 누락되었습니다.`)
+            // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
             return;
           }
           this.broadcastToRoom(gameId, message);
           break;
         }
         case 'kickCollision': {
-          const { gameId, payload } = parsed;
-          if (!gameId || !payload) {
-            socket.write('kickCollision 메시지에 필요한 필드가 누락되었습니다.');
-            return;
-          }
-          this.broadcastToRoom(gameId, message);
+          this.professorDefeated(parsed, dataName, message);
           break;
         }
         case 'throwCollision': {
-          const { gameId, payload } = parsed;
-        
-          if (!gameId || !payload) {
-            socket.write('throwCollision 메시지에 필요한 필드가 누락되었습니다.');
-            return;
-          }
-        
-          // 방 데이터 가져오기
-          const room = this.rooms.get(gameId);
-          if (!room) {
-            socket.write(`방 '${gameId}'이 존재하지 않습니다.`);
-            return;
-          }
-        
-          // 학생 수 감소 처리
-          room.remainStdNum -= 1;
-          console.log(`One student out. Remaining students: ${room.remainStdNum}`);
-        
-          // isEnd 값 결정
-          const isEnd = room.remainStdNum <= 0;
-        
-          // 메시지에 isEnd 필드 추가
-          const responseMessage = {
-            ...parsed,
-            isEnd,
-          };
-        
-          // 브로드캐스트
-          this.broadcastToRoom(gameId, JSON.stringify(responseMessage));
-        
-          // 게임 종료 시 추가 처리
-          if (isEnd) {
-            console.log(`방 '${gameId}'의 게임이 종료되었습니다.`);
-            // 필요한 경우 추가 로직을 작성하세요.
-          }
+          this.hitAndDown(parsed);
           break;
         }
         case 'throwing': {
           const { gameId } = parsed;
           if (!gameId) {
-            socket.write('throwing 메시지에 필요한 필드가 누락되었습니다.');
+            console.log(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            return;
+          }
+          this.broadcastToRoom(gameId, message);
+          break;
+        }
+        case 'point': {
+          const { gameId } = parsed;
+          if (!gameId) {
+            console.log(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
             return;
           }
           this.broadcastToRoom(gameId, message);
           break;
         }
         default:
-          socket.write(`알 수 없는 dataName: ${dataName}`);
+          // socket.write(`알 수 없는 dataName: ${dataName}`);
           break;
       }
     } catch (error) {
-      socket.write(`데이터 처리 중 오류 발생: ${error.message}`);
+      // socket.write(`데이터 처리 중 오류 발생: ${error.message}`);
     }
   }
 
@@ -159,46 +138,44 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
         joinComplete: false,
         totalMembers: totalMember,
         startTimeout: setTimeout(() => {
-          this.startGame(gameId, false);
+          this.startGame(socket, gameId, false);
         }, 10000), // 10초 타이머
         studentNum: studentNum,
-        remainStdNum: studentNum
+        remainStdNum: studentNum,
+        stdAliveCheck: Array(totalMember).fill(-1),
+        currJoin: Array(totalMember).fill(true)
       });
-      console.log(`input game id is ${gameId}`);
-      console.log('${gameId} 보내짐')
     }
     
     const room = this.rooms.get(gameId)!;
-    console.log(`room data is ${room}`);
 
     if (room.joinComplete) {
-      socket.write(`방 ${gameId}에 이미 게임이 시작되었습니다.`);
+      console.log(`방 ${gameId}에 이미 게임이 시작되었습니다.`);
+      // socket.write(`방 ${gameId}에 이미 게임이 시작되었습니다.`);
       return;
     }
 
     // 방에 클라이언트 추가
     room.members.add(socket);
 
-    console.log(`플레이어 ${playerIndex}가 방 '${gameId}'에 추가되었습니다.`);
-
     // 클라이언트에게 응답
-    socket.write(
-      JSON.stringify({
-        message: `방 '${gameId}'에 참여하였습니다.`,
-        gameId,
-        playerIndex,
-        localDateTime,
-      }),
-    );
+    // socket.write(
+    //   JSON.stringify({
+    //     message: `방 '${gameId}'에 참여하였습니다.`,
+    //     gameId,
+    //     playerIndex,
+    //     localDateTime,
+    //   }),
+    // );
 
     // 모든 클라이언트가 참여했는지 확인
     if (room.members.size === room.totalMembers) {
       clearTimeout(room.startTimeout); // 10초 제한 타이머 해제
-      this.startGame(gameId, true);
+      this.startGame(socket, gameId, true);
     }
   }
 
-  private startGame(gameId: string, success: boolean) {
+  private startGame(socket: Socket, gameId: string, success: boolean) {
     const room = this.rooms.get(gameId);
     if (!room) return;
 
@@ -215,7 +192,8 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
       member.write(message);
     }
 
-    console.log(`방 ${gameId} 게임 시작: success=${success}`);
+    console.log(`방 ${gameId}에 모든 유저가 접속했습니다. 게임 시작: success=${success}`);
+    socket.write(`방 ${gameId}에 모든 유저가 접속했습니다. 게임 시작: success=${success}`);
 
     // 방 데이터 정리
     room.joinComplete = true;
@@ -225,7 +203,8 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
     console.log(`game id is ${gameId}`)
     const room = this.rooms.get(gameId);
     if (!room) {
-      console.log(`방 '${gameId}'이 존재하지 않습니다.`);
+      console.log(`boadcast: 방 '${gameId}'이 존재하지 않습니다.`);
+      // socket.write(`boadcast: 방 '${gameId}'이 존재하지 않습니다.`);
       return;
     }
 
@@ -252,27 +231,99 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
     }
   }
 
-  removeClientFromRoom(gameId: string, clientId: string) {
+  removeClientFromRoom(gameId: string, role: number, playerIndex: number) {
     const room = this.rooms.get(gameId);
+
     if (!room) {
       console.log(`방 '${gameId}'이 존재하지 않습니다.`);
       return;
     }
-  
-    // `clientId`에 해당하는 소켓 찾기
-    const socket = Array.from(room.members).find((s) => s['clientId'] === clientId);
-    if (socket) {
-      room.members.delete(socket); // 소켓 삭제
-      console.log(`클라이언트 '${clientId}'가 방 '${gameId}'에서 제거되었습니다.`);
-  
-      // 방이 비었으면 방 삭제
-      if (room.members.size === 0) {
-        clearTimeout(room.startTimeout); // 타이머 정리
-        this.rooms.delete(gameId);
-        console.log(`방 '${gameId}'이 삭제되었습니다.`);
-      }
-    } else {
-      console.log(`클라이언트 '${clientId}'를 방 '${gameId}'에서 찾을 수 없습니다.`);
+    room.currJoin[playerIndex]=false;
+
+    if(role==0) {
+      const map: Record<string, any> = { dataName: 'kickCollision', gameId: gameId, whokicked: -1, isOut: true };
+
+      //JSON으로 변환한 뒤 문자열로 변환
+      const jsonString = JSON.stringify(map);
+      const parse = JSON.parse(jsonString)
+
+      this.professorDefeated(parse, "kickCollision", JSON.stringify(parse));
     }
-  }  
+    else if(role==2) {
+      const map: Record<string, any> = { dataName: 'throwCollision', gameId: gameId, whoHit: playerIndex, isOut: true };
+
+      //JSON으로 변환한 뒤 문자열로 변환
+      const jsonString = JSON.stringify(map);
+      const parse = JSON.parse(jsonString)
+
+      this.hitAndDown(parse);
+    }
+  }
+  
+  hitAndDown(parsed: any) {
+    const { gameId, whoHit } = parsed;
+    if(!("isOut" in parsed)) {
+      parsed.isOut = false;
+    }
+
+    console.log(`throwCollision : gameId - ${gameId} whohit - ${whoHit}`)
+  
+    if (!gameId || whoHit==null) {
+      // socket.write('throwCollision 메시지에 필요한 필드 gameId 또는 whoHit가 누락되었습니다.');
+      console.log(`throwCollision 메시지에 필요한 필드 gameId 또는 whoHit가 누락되었습니다.`);
+      return;
+    }
+  
+    // 방 데이터 가져오기
+    const room = this.rooms.get(gameId);
+    if (!room) {
+      // socket.write(`ThrowCollision: 방 '${gameId}'이 존재하지 않습니다.`);
+      console.log(`ThrowCollision: 방 '${gameId}'이 존재하지 않습니다.`);
+      return;
+    }
+    
+    if(room.stdAliveCheck[whoHit]!=-1) {
+      return;
+    }
+
+    room.remainStdNum -= 1;
+    room.stdAliveCheck[whoHit]=room.remainStdNum;
+  
+    console.log(`ThrowCollision: 학생 탈락. 남은 학생 수: ${room.remainStdNum}`);
+    // socket.write(`ThrowCollision: 학생 탈락. 남은 학생 수: ${room.remainStdNum}`);
+  
+    // isEnd 값 결정
+    const isEnd = room.remainStdNum <= 0;
+  
+    // 메시지에 isEnd 필드 추가
+    const responseMessage = {
+      ...parsed,
+      isEnd,
+    };
+
+    console.log("throw collision send broadcast");
+  
+    // 브로드캐스트
+    this.broadcastToRoom(gameId, JSON.stringify(responseMessage));
+  
+    // 게임 종료 시 추가 처리
+    if (isEnd) {
+      console.log(`게임 '${gameId}'의 게임이 종료되었습니다.`);
+      // socket.write(`게임 '${gameId}'의 게임이 종료되었습니다`);
+    }
+  }
+
+  professorDefeated(parsed: any, dataName: string, message: string) {
+    const { gameId } = parsed;
+    if(!("isOut" in parsed)) {
+      parsed.isOut = false;
+    }
+
+    if (!gameId) {
+      console.log(`${dataName}:  메시지에 gameId가 누락되었습니다.`)
+      // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+      return;
+    }
+    this.broadcastToRoom(gameId, message);
+  }
 }
