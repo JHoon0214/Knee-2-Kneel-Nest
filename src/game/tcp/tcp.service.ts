@@ -89,7 +89,7 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
           break;
         }
         case 'a_kickCollision': {
-          this.professorDefeated(parsed, dataName, message);
+          this.assistantDefeated(parsed, dataName, message);
           break;
         }
         case 'throwCollision': {
@@ -349,6 +349,5 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
       return;
     }
     this.broadcastToRoom(gameId, message);
-    this.lobbyConnectorService.sendGameResultToLobby(gameId, this.rooms.get(gameId).currJoin);
   }
 }
