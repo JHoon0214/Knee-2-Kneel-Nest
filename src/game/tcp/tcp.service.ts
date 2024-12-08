@@ -3,6 +3,7 @@ import { Server, Socket } from 'net';
 import { GameData, gamesData } from '../../lobby-connector/game-data';
 import { LobbyConnectorService } from '../../lobby-connector/lobby-connector.service';
 import { json } from 'stream/consumers';
+import { captureRejectionSymbol } from 'events';
 
 interface RoomData {
   members: Set<Socket>;
@@ -84,6 +85,10 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
           break;
         }
         case 'kickCollision': {
+          this.professorDefeated(parsed, dataName, message);
+          break;
+        }
+        case 'a_kickCollision': {
           this.professorDefeated(parsed, dataName, message);
           break;
         }
@@ -249,6 +254,9 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
 
       this.professorDefeated(parse, "kickCollision", JSON.stringify(parse));
     }
+    else if(role==1) {
+      const map: Record<string, any> = { dataName: 'a_kickCollision', gameId: gameId, whokicked: -1, whoHit: playerIndex, isOut: true };
+    }
     else if(role==2) {
       const map: Record<string, any> = { dataName: 'throwCollision', gameId: gameId, whoHit: playerIndex, isOut: true };
 
@@ -310,6 +318,7 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
     if (isEnd) {
       console.log(`게임 '${gameId}'의 게임이 종료되었습니다.`);
       // socket.write(`게임 '${gameId}'의 게임이 종료되었습니다`);
+      this.lobbyConnectorService.sendGameResultToLobby(gameId, this.rooms.get(gameId).currJoin)
     }
   }
 
@@ -325,5 +334,21 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
       return;
     }
     this.broadcastToRoom(gameId, message);
+    this.lobbyConnectorService.sendGameResultToLobby(gameId, this.rooms.get(gameId).currJoin);
+  }
+
+  assistantDefeated(parsed: any, dataName: string, message: string) {
+    const { gameId } = parsed;
+    if(!("isOut" in parsed)) {
+      parsed.isOut = false;
+    }
+
+    if (!gameId) {
+      console.log(`${dataName}:  메시지에 gameId가 누락되었습니다.`)
+      // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+      return;
+    }
+    this.broadcastToRoom(gameId, message);
+    this.lobbyConnectorService.sendGameResultToLobby(gameId, this.rooms.get(gameId).currJoin);
   }
 }
