@@ -54,6 +54,9 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
         return;
       }
 
+      console.log(`message in: ${message}`);
+      console.log(`parsed in: ${parsed.stringify}`);
+
       // dataName에 따른 처리
       switch (dataName) {
         case 'join': {
@@ -107,6 +110,16 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
           break;
         }
         case 'point': {
+          const { gameId } = parsed;
+          if (!gameId) {
+            console.log(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            return;
+          }
+          this.broadcastToRoom(gameId, message);
+          break;
+        }
+        case 'pointCollision': {
           const { gameId } = parsed;
           if (!gameId) {
             console.log(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
@@ -256,13 +269,18 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
     }
     else if(role==1) {
       const map: Record<string, any> = { dataName: 'a_kickCollision', gameId: gameId, whokicked: -1, whoHit: playerIndex, isOut: true };
+
+      const jsonString = JSON.stringify(map);
+      const parse = JSON.parse(jsonString);
+
+      this.assistantDefeated(parse, "a_kickCollision", JSON.stringify(parse));
     }
     else if(role==2) {
       const map: Record<string, any> = { dataName: 'throwCollision', gameId: gameId, whoHit: playerIndex, isOut: true };
 
       //JSON으로 변환한 뒤 문자열로 변환
       const jsonString = JSON.stringify(map);
-      const parse = JSON.parse(jsonString)
+      const parse = JSON.parse(jsonString);
 
       this.hitAndDown(parse);
     }
@@ -287,6 +305,11 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
     if (!room) {
       // socket.write(`ThrowCollision: 방 '${gameId}'이 존재하지 않습니다.`);
       console.log(`ThrowCollision: 방 '${gameId}'이 존재하지 않습니다.`);
+      return;
+    }
+
+    if(whoHit>99) {
+      this.broadcastToRoom(gameId, JSON.stringify(parsed));
       return;
     }
     
