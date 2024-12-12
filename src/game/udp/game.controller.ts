@@ -21,7 +21,6 @@ export class GameController {
         
         this.udpServer.on('listening', () => {
             const address = this.udpServer.address();
-            console.log(`UDP server is listening on ${address.address}:${address.port}`);
         });
 
         this.udpServer.on('message', (msg, rinfo) => {

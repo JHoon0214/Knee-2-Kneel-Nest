@@ -7,6 +7,8 @@ import { captureRejectionSymbol } from 'events';
 
 interface RoomData {
   members: Set<Socket>;
+  memberIndex: Map<Socket, number>;
+  teams : Map<Socket, number>;
   joinComplete: boolean;
   startTimeout?: NodeJS.Timeout;
   totalMembers: number;
@@ -60,14 +62,14 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
       // dataName에 따른 처리
       switch (dataName) {
         case 'join': {
-          const { gameId, playerIndex, totalMember, localDateTime, studentNum } = parsed;
+          const { gameId, playerIndex, totalMember, localDateTime, studentNum, role } = parsed;
           if (!gameId || playerIndex==null || totalMember<0 || !localDateTime) {
             // socket.write('join 메시지에 필요한 필드가 누락되었습니다.');
             return;
           }
           console.log(`Join: 새로운 유저(${playerIndex})가 게임(${gameId})에 참가하였습니다`);
           // socket.write(`Join: 새로운 유저(${playerIndex})가 게임(${gameId})에 참가하였습니다`);
-          this.handleJoin(socket, gameId, playerIndex, totalMember, localDateTime, studentNum );
+          this.handleJoin(socket, gameId, playerIndex, totalMember, localDateTime, studentNum, role );
           break;
         }
 
@@ -129,6 +131,46 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
           this.broadcastToRoom(gameId, message);
           break;
         }
+        case 'chat' : {
+          const { gameId, chatMessage } = parsed;
+          if (!gameId) {
+            console.log(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            return;
+          }
+          const team = this.rooms.get(gameId)!.teams.get(socket) == 2 ? 1 : 0;
+
+          const roleNames = ["교수", "조교", "학생"];
+
+          const newChatContent = "player" + this.rooms.get(gameId)!.memberIndex.get(socket) + "(" + roleNames[this.rooms.get(gameId)!.teams.get(socket)] + ")" + " : " + chatMessage;
+          const newMessage = JSON.stringify({
+            ...parsed,
+            chatMessage: newChatContent
+          });
+          
+          this.broadcastToRoomInTeam(gameId, newMessage, team);
+          break;
+        }
+        case 'startTask': {
+          const { gameId } = parsed;
+          if (!gameId) {
+            console.log(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            return;
+          }
+          this.broadcastToRoom(gameId, message);
+          break;
+        }
+        case 'endTask': {
+          const { gameId } = parsed;
+          if (!gameId) {
+            console.log(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
+            return;
+          }
+          this.broadcastToRoom(gameId, message);
+          break;
+        }
         default:
           // socket.write(`알 수 없는 dataName: ${dataName}`);
           break;
@@ -148,11 +190,13 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
     this.removeFromAllRooms(socket);
   }
 
-  private handleJoin(socket: Socket, gameId: string, playerIndex: string, totalMember: number, localDateTime: string, studentNum: number) {
+  private handleJoin(socket: Socket, gameId: string, playerIndex: number, totalMember: number, localDateTime: string, studentNum: number, role: number) {
     if (!this.rooms.has(gameId)) {
       // 방 초기화
       this.rooms.set(gameId, {
         members: new Set(),
+        teams: new Map(),
+        memberIndex: new Map(),
         joinComplete: false,
         totalMembers: totalMember,
         startTimeout: setTimeout(() => {
@@ -175,6 +219,9 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
 
     // 방에 클라이언트 추가
     room.members.add(socket);
+    console.log("role: ", role);
+    room.teams.set(socket, role);
+    room.memberIndex.set(socket, playerIndex);
 
     // 클라이언트에게 응답
     // socket.write(
@@ -230,6 +277,23 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
       client.write(message);
     }
     console.log(`방 '${gameId}'에 메시지가 브로드캐스트되었습니다: ${message}`);
+  }
+
+  private broadcastToRoomInTeam(gameId: string, message: string, userTeam: number) {
+    console.log(`game id is ${gameId}`)
+    const room = this.rooms.get(gameId);
+    if (!room) {
+      console.log(`boadcast: 방 '${gameId}'이 존재하지 않습니다.`);
+      // socket.write(`boadcast: 방 '${gameId}'이 존재하지 않습니다.`);
+      return;
+    }
+    for (const [client, team] of room.teams) {
+      const currTeam = team==2 ? 1 : 0;
+      if(currTeam==userTeam) {
+        console.log(`team ${userTeam}에게 메시지가 브로드캐스트되었습니다: ${message}`);
+        client.write(message);
+      }
+    }
   }
 
   private removeFromAllRooms(socket: Socket) {
@@ -308,8 +372,16 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
       return;
     }
 
+    console.log('howhit: ', whoHit);
+
     if(whoHit>99) {
-      this.broadcastToRoom(gameId, JSON.stringify(parsed));
+      console.log("npc hit");
+      const isEnd = false;
+      const responseMessage = {
+        ...parsed,
+        isEnd,
+      };
+      this.broadcastToRoom(gameId, JSON.stringify(responseMessage));
       return;
     }
     
