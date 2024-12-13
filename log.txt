@@ -1,0 +1,1584 @@
+nohup: ignoring input
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mLobbyConnectorModule dependencies initialized[39m[38;5;3m +20ms[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mGameModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mChatModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +5ms[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mGameController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mLobbyConnectorController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mChatController {/chat}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 267226  - [39m10/27/2024, 4:11:23 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +5ms[39m
+UDP server bound to 0.0.0.0:3001
+UDP server is listening on 0.0.0.0:3001
+TCP Chat server listening on port 3002
+HTTP server is listening on port 3003
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
+message in
+Received message from 119.66.249.215:3008:
+jump: false, kick: false, sprint: false
+Client 119.66.249.215:3008 joined room 1: 119.66.249.215:3008
+broadcast to member in room 1
+sending... {"playerIndex":1,"roomId":1,"dataName":"state","move":{"x":0,"y":0},"jump":false,"sprint":false,"kick":false} to 3008 119.66.249.215
