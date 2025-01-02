@@ -13,10 +13,12 @@ export class LobbyConnectorService {
       .map((joined, index) => (joined ? index : -1))
       .filter((index) => index !==-1)
     };
-    const uri = "http://knee2kneel.com/api/game/finish/" + gameId;
+    const uri = "https://knee2kneel.com/api/game/finish/" + gameId;
 
+    console.log("Sending game result to lobby");
+    console.log("Sending game id: " + gameId);
+    console.log("Payload: " + JSON.stringify(payload));
     try {
-
       const response = await firstValueFrom(
         this.httpService.post(uri, payload),
       );
