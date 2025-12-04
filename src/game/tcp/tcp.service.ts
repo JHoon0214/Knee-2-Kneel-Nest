@@ -47,7 +47,7 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
   private handleIncomingData(socket: Socket, data: Buffer) {
     const message = data.toString();
     try {
-      const parsed = JSON.parse(message);
+      let parsed = JSON.parse(message);
 
       // dataName 필드 확인
       const { dataName } = parsed;
@@ -90,6 +90,7 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
           break;
         }
         case 'kickCollision': {
+          parsed.isOut = false;
           this.professorDefeated(parsed, dataName, message);
           break;
         }
@@ -222,16 +223,6 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
     console.log("role: ", role);
     room.teams.set(socket, role);
     room.memberIndex.set(socket, playerIndex);
-
-    // 클라이언트에게 응답
-    // socket.write(
-    //   JSON.stringify({
-    //     message: `방 '${gameId}'에 참여하였습니다.`,
-    //     gameId,
-    //     playerIndex,
-    //     localDateTime,
-    //   }),
-    // );
 
     // 모든 클라이언트가 참여했는지 확인
     if (room.members.size === room.totalMembers) {
@@ -419,7 +410,9 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
 
   professorDefeated(parsed: any, dataName: string, message: string) {
     const { gameId } = parsed;
+    
     if(!("isOut" in parsed)) {
+      console.log("isOut is not in parsed");
       parsed.isOut = false;
     }
 
@@ -428,7 +421,7 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
       // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
       return;
     }
-    this.broadcastToRoom(gameId, message);
+    this.broadcastToRoom(gameId, JSON.stringify(parsed));
     this.lobbyConnectorService.sendGameResultToLobby(gameId, this.rooms.get(gameId).currJoin);
   }
 
@@ -443,6 +436,6 @@ export class TcpService implements OnModuleInit, OnModuleDestroy {
       // socket.write(`${dataName}:  메시지에 gameId가 누락되었습니다.`);
       return;
     }
-    this.broadcastToRoom(gameId, message);
+    this.broadcastToRoom(gameId, JSON.stringify(parsed));
   }
 }
